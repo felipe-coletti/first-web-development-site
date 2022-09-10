@@ -62,7 +62,8 @@ nav {
     display: none;
     position: absolute;
     top: 70px;
-    left: ;
+    left: 0;
+    background-color: #000;
 
 }
 
@@ -99,5 +100,5 @@ nav {
     color: #fff;
     font-size: 1em;
     align-items: center;
-    height: 
+    height: 80px; 
 }
