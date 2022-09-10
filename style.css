@@ -92,5 +92,12 @@ nav {
 }
 
 #rodape {
-    
+    justify-content: center;
+    text-align: center;
+    background-color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1em;
+    align-items: center;
+    height: 
 }
