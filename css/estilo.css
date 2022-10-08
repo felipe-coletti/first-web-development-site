@@ -12,6 +12,26 @@ body{
     width: 100%;
 }
 
+.acessibility{
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.atalhos, .links_acess{
+    list-style: none;
+    display: inline-flex;
+    padding: 5px;
+}
+
+.atalhos li, .link_acess li{
+    padding-left: 10px;
+}
+
+.link_acess{
+    margin-left: 60%;
+}
+
 #topo{
     width: 100%;
     background-color: #ddd;

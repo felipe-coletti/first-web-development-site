@@ -12,11 +12,18 @@
     <link rel="icon" href="imagem/favicon.png">
 </head>
 <body>
+    <div class="acessibilidade flex-container">
+        <ul class="atalhos">
+            <li><a href="#conteudo" acesskey="1" title="Ir para a área de conteúdo">Ir para a área de conteúdo [1]</a></li>
+            <li><a href="#menu" acesskey="2" title="Ir para o menu de navegação">Ir para o menu de navegação [2]</a></li>
+            <li><a href="#rodapé" acesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></li>
+        </ul>
+    </div>
     <header class="flex-container" id="topo"><!--Topo-->
         <a href="index.html" title="Voltar para o início"><img class="imagem" src="imagem/FATEC_ZONA_LESTE.png" alt="Logo da Fatec da Zona leste em cinza escuro levemente azulado e vermelho"></a>
     </header>
     <nav class="flex-container"><!--Navegação-->
-        <ul  class="menu">
+        <ul  class="menu" id="menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="comentarios.html">Comentários</a></li>
             <li><a href="metadados.html">Metadados</a></li>
