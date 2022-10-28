@@ -9,10 +9,35 @@
     <!--Fim dos metadados-->
     <title>Aulas de desenvolvimento web 1</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="imagem/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <div class="acessibilidade flex-container">
+        <ul class="atalhos">
+            <li><a href="#conteudo" acesskey="1" title="Ir para a área de conteúdo">Ir para a área de conteúdo [1]</a></li>
+            <li><a href="#menu" acesskey="2" title="Ir para o menu de navegação">Ir para o menu de navegação [2]</a></li>
+            <li><a href="#rodapé" acesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></li>
+        </ul>
+        <ul class="links_access">
+            <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="javascript:void(0);" id="contraste">Contraste</a></li>
+            <li><a href="javascript:void(0);" id="semcontraste">Sem Contraste</a></li>
+            <li><a href="javascript:void(0);" id="aumenta">A+</a></li>
+            <li><a href="javascript:void(0);" id="diminui">A-</a></li>
+        </ul>
+    </div>
     <header class="flex-container" id="topo"><!--Topo-->
         <a href="index.html" title="Voltar para o início"><img class="imagem" src="imagem/FATEC_ZONA_LESTE.png" alt="Logo da Fatec da Zona leste em cinza escuro e vermelho"></a>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </header>
     <nav class="flex-container"><!--Navegação-->
         <ul  class="menu">
@@ -26,71 +51,72 @@
                 </ul>
             </li>
             <li><a href="layout.html">Layout</a></li>
+            <li><a href="contato.html">Fale conosco</a></li>
         </ul>
     </nav>
     <main class="flex-container" id="conteudo">
-        <h1>Fale conosco</h1>
-        <form action="" method="post" name="contato" id="contato">
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <label class="required" for="nome">Nome</label><br>
-                <input type="text" name="nome" id="nome" placeholder="Nome Completo" required><br>
-                <label for="cpf" class="required">CPF</label><br>
-                <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99" required><br>
-                <label for="data" class="required">Data de nascimento</label><br>
-                <input type="date" name="data" id="data" required><br>
-                <label for="telefone">Telefone</label><br>
-                <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999"><br>
-                <label for="email" class="required">E-Mail</label><br>
-                <input type="email" name="email" id="email" placeholder="nome@site.com.br" required><br>
-            </fieldset>
-            <fieldset>
-                <legend>Endereço</legend>
-                <label for="cep" class="required">CEP</label><br>
-                <input type="text" name="cep" id="cep" placeholder="99999-999" required><br>
-                <label for="rua">Rua</label><br>
-                <input type="text" name="rua" id="rua"><br>
-                <label for="numero" class="required">Número</label><br>
-                <input type="number" name="numero" id="numero" required><br>
-                <label for="complemento">Complemento</label><br>
-                <input type="text" name="complemento" id="complemento" placeholder="Apartamento, Bloco, Casa, etc."><br>
-                <label for="bairro">Bairro</label><br>
-                <input type="text" name="bairro" id="bairro"><br>
-                <label for="cidade">Cidade</label><br>
-                <input type="text" name="cidade" id="cidade"><br>
-                <label for="estado">Estado</label><br>
-                <input type="text" name="estado" id="estado"><br>
-    
-            </fieldset>
-            <fieldset>
-                <legend>Dados da mensagem</legend>
-                <label for="curso" class="required">Curso</label><br>
-                <select name="curso" id="curso" required>
-                    <option value="" selected disabled>Selecione um curso</option>
-                    <option value="ads">Análise e Desenvolvimento de Sistemas</option>
-                    <option value="comex">Comércio Exterior</option>
-                    <option value="dpp">Desenvolvimento de Produtos Plásticos</option>
-                    <option value="dsm">Desenvolvimento de Software Multiplataforma</option>
-                    <option value="ge">Gestão Empresarial</option>
-                    <option value="rh">Gestão de Recursos Humanos</option>
-                    <option value="log">Logística</option>
-                    <option value="pol">Polímeros</option>
-                </select><br>
-                <label for="assunto" class="required">Assunto</label><br>
-                <select name="assunto" id="assunto" required>
-                    <option value="elogio">Elogio</option>
-                    <option value="sugestao">Sugestão</option>
-                    <option value="reclamacao">Reclamação</option>
-                    <option value="outro">Outro</option>
-                </select><br>
-                <label for="mensagem" class="required">Mensagem</label><br>
-                <textarea name="mensagem" id="mensagem" cols="40" rows="10" required></textarea>
-            </fieldset>
-            <fieldset>
-            <button type="submit">Enviar</button> <button type="reset">Limpar</button>
-            </fieldset>
-        </form>
-
+        <section>
+            <h1>Fale conosco</h1>
+            <form action="" method="post" name="contato" id="contato">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label class="required" for="nome">Nome</label><br>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo" required><br>
+                    <label for="cpf" class="required">CPF</label><br>
+                    <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99" required><br>
+                    <label for="data" class="required">Data de nascimento</label><br>
+                    <input type="date" name="data" id="data" required><br>
+                    <label for="telefone">Telefone</label><br>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999"><br>
+                    <label for="email" class="required">E-Mail</label><br>
+                    <input type="email" name="email" id="email" placeholder="nome@site.com.br" required><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="cep" class="required">CEP</label><br>
+                    <input type="text" name="cep" id="cep" placeholder="99999-999" required><br>
+                    <label for="rua">Rua</label><br>
+                    <input type="text" name="rua" id="rua"><br>
+                    <label for="numero" class="required">Número</label><br>
+                    <input type="number" name="numero" id="numero" required><br>
+                    <label for="complemento">Complemento</label><br>
+                    <input type="text" name="complemento" id="complemento" placeholder="Apartamento, Bloco, Casa, etc."><br>
+                    <label for="bairro">Bairro</label><br>
+                    <input type="text" name="bairro" id="bairro"><br>
+                    <label for="cidade">Cidade</label><br>
+                    <input type="text" name="cidade" id="cidade"><br>
+                    <label for="estado">Estado</label><br>
+                    <input type="text" name="estado" id="estado"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados da mensagem</legend>
+                    <label for="curso" class="required">Curso</label><br>
+                    <select name="curso" id="curso" required>
+                        <option value="" selected disabled>Selecione um curso</option>
+                        <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="comex">Comércio Exterior</option>
+                        <option value="dpp">Desenvolvimento de Produtos Plásticos</option>
+                        <option value="dsm">Desenvolvimento de Software Multiplataforma</option>
+                        <option value="ge">Gestão Empresarial</option>
+                        <option value="rh">Gestão de Recursos Humanos</option>
+                        <option value="log">Logística</option>
+                        <option value="pol">Polímeros</option>
+                    </select><br>
+                    <label for="assunto" class="required">Assunto</label><br>
+                    <select name="assunto" id="assunto" required>
+                        <option value="elogio">Elogio</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="outro">Outro</option>
+                    </select><br>
+                    <label for="mensagem" class="required">Mensagem</label><br>
+                    <textarea name="mensagem" id="mensagem" cols="40" rows="10" required></textarea>
+                </fieldset>
+                <fieldset>
+                <button type="submit">Enviar</button> <button type="reset">Limpar</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
     <footer class="flex-container" id="rodape"><!--Rodapé-->
         <p>Todos os direitos reservados &copy; 2022</p>
