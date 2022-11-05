@@ -47,7 +47,9 @@ body{
     width: 40%;
     height: auto;
 }
-/*Navegação*/
+
+/* navegação */
+
 nav{
     width: 100%;
     background-color:#dc143c;
@@ -96,11 +98,15 @@ nav{
     display: block;
     width: 170px;
 }
-/*ocultar menu hamburguer*/
+
+/* ocultar menu hamburguer */
+
 label[for="bt_menu"], #bt_menu{
     display: none;
 }
+
 /* conteúdo */
+
 #conteudo{
     min-height: 800px;
     flex-direction: column;
@@ -109,15 +115,40 @@ label[for="bt_menu"], #bt_menu{
 
 }
 
+.breadcrumb{
+    padding-left: 2%;
+    list-style: none;
+}
+
+.breadcrumb li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #000;
+}
+
+.breadcrumb li a{
+    color:#555;
+}
+
+.breadcrumb li a:hover{
+    color:#000;
+}
+
+.breadcrumb li+li::before{
+    content:"/\00a0";
+}
+
 h1{
     text-align: center;
-     
 }
 
 section{
-    padding: 2% 10%; /*acrescentado*/
+    padding: 2% 10%;
 }
-/* Formulário */
+
+/* formulário */
+
 form{
     align-self: center;
     padding: 2%;   
@@ -129,24 +160,23 @@ label, legend{
 input, select, textarea{
     padding: 10px;
     border-radius: 15px;
-    width: 80%; /*corrigido*/
+    width: 80%;
 }
 
 fieldset{
-    width: 70%; /*corrigido*/
+    width: 70%;
     border: none;
-    /*padding: 40px;*/ /*corrigido*/
     margin: auto;
 }
 
 button{
-    width: 35%; /*corrigido*/
+    width: 35%;
     padding: 10px;
         
 }
 
 .required::after{
-    content: " *";
+    content: "\00a0*";
     color: red;
 
 }
@@ -168,7 +198,9 @@ video{
     height: auto;
     align-self: center;
 }
+
 /* media queries barra de acessibilidade */
+
 @media screen and (max-width: 1680px){
     .links_access{
         margin-left: 45%;
@@ -202,7 +234,9 @@ video{
         margin: auto;
     }
 }
+
 /* media queries menu responsivo */
+
 @media screen and (max-width: 740px){
     nav{
         justify-content: left;
@@ -219,27 +253,20 @@ video{
 
     #bt_menu:checked ~ .menu{
         display: block;
-        width: 100%; /*corrigido*/
-
-       
-       
+        width: 100%;
     }
 
     .menu li{
-        padding: 5% 1px; /*corrigido*/
-        
-        
+        padding: 5% 1px;
     }
 
     .menu li ul{
-        position:static; /*acrescentado*/
-        
+        position:static;
     }
 
     .menu li ul li{
-        position: relative; /*acrescentado*/
-        display: block; /*acrescentado*/
-
+        position: relative;
+        display: block;
     }
     
     .imagem{
