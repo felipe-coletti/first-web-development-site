@@ -52,10 +52,9 @@ body{
 
 nav{
     width: 100%;
-    background-color:#dc143c;
+    background-color: #dc143c;
     height: auto;
     justify-content: center;
-    
 }
 
 .menu{
@@ -112,7 +111,6 @@ label[for="bt_menu"], #bt_menu{
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-
 }
 
 .breadcrumb{
@@ -153,6 +151,7 @@ form{
     align-self: center;
     padding: 2%;   
 }
+
 label, legend{
     font-size: 0.7em;
 }
@@ -171,14 +170,12 @@ fieldset{
 
 button{
     width: 35%;
-    padding: 10px;
-        
+    padding: 10px;  
 }
 
 .required::after{
     content: "\00a0*";
     color: red;
-
 }
 
 #rodape{
@@ -190,7 +187,6 @@ button{
     font-size: 1em;
     align-items: center;
     height: 80px;
-
 }
 
 video{
