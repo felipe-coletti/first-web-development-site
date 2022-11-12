@@ -28,6 +28,10 @@ body{
     padding-left: 10px;
 }
 
+.atalhos li a, .links_access li a{
+    color: yellow;
+}
+
 .link_acess{
     margin-left: 60%;
 }
