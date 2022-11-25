@@ -19,7 +19,7 @@ $(document).ready(function() {
             var validacep = /^[0-9]{8}$/;
 
             // Valida o formato do CEP.
-            if(validacep.test(cep)) {
+            if (validacep.test(cep)) {
                 // Preenche os campos com "carregando" enquanto consulta webservice.
                 $("#rua").val("Carregando...");
                 $("#bairro").val("Carregando...");
