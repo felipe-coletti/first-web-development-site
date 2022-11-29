@@ -11,7 +11,7 @@ $(document).ready(function() {
     $("#cep").blur(function() {
 
         // Nova variável "cep" somente com dígitos.
-        var cep = $(this).val().replace(/\D/g, '')
+        var cep = $(this).val().replace(/\D/g, "")
 
         // Verifica se campo cep possui valor informado.
         if (cep != "") {
